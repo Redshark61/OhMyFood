@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    padding: 1rem;
+  }
+
+  &__subtitle {
+    background-color: #ddd;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    >i {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Shrikhand', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  counter-reset: list-item;
+}
+
+img {
+  max-width: 100%;
+}
+
+section:not(.fit) {
+  padding: 5vh 5vw;
+}

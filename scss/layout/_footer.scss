@@ -1,0 +1,11 @@
+.footer {
+  padding: 1rem;
+
+  li {
+    padding: 0;
+
+    &:first-of-type {
+      margin-top: 2rem;
+    }
+  }
+}

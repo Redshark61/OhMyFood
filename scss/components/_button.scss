@@ -1,0 +1,45 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, $primary, $secondary);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.no-button {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  position: relative;
+
+  >.heart {
+    &--overlay {
+      scale: 0;
+      transition: all 0.3s ease-in-out;
+      color: $primary;
+    }
+
+    &--empty {
+      translate: 100% 0;
+    }
+  }
+
+  &:hover {
+    >.heart {
+      &--overlay {
+        scale: 1;
+      }
+
+    }
+  }
+}

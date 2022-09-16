@@ -1,0 +1,172 @@
+#index {
+  #hero {
+    padding: 10vh 2rem 5vh;
+
+    p {
+      font-size: .9rem;
+      color: #999;
+      margin-bottom: 2rem;
+    }
+  }
+
+  li.card {
+    overflow: visible;
+  }
+
+  .spinner-container {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    animation: hide 0s 3s linear forwards;
+  }
+
+  .s1,
+  .s2,
+  .s3 {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 50%;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .s1 {
+    background: $primary;
+    animation: load1 3s;
+  }
+
+  .s2 {
+    background: $secondary;
+    translate: 100px 0;
+    animation: load2 3s;
+  }
+
+  .s3 {
+    background: $success;
+    translate: 0 100px;
+    animation: load3 3s;
+  }
+
+  @keyframes load1 {
+    0% {
+      visibility: visible;
+      width: 90px;
+      height: 90px;
+    }
+
+    25% {
+      translate: 100px 0;
+    }
+
+    50% {
+      translate: 100px 100px
+    }
+
+    75% {
+      translate: 0 100px;
+    }
+
+    100% {
+      visibility: visible;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @keyframes load2 {
+    0% {
+      visibility: visible;
+      width: 90px;
+      height: 90px;
+    }
+
+    25% {
+      translate: 100px 100px;
+    }
+
+    50% {
+      translate: 0px 100px
+    }
+
+    75% {
+      translate: 0 0px;
+    }
+
+    100% {
+      visibility: visible;
+      width: 100px;
+      height: 100px;
+    }
+
+  }
+
+  @keyframes load3 {
+    0% {
+      visibility: visible;
+      width: 90px;
+      height: 90px;
+    }
+
+    25% {
+      translate: 0px 0px;
+    }
+
+    50% {
+      translate: 100px 0px
+    }
+
+    75% {
+      translate: 100px 100px;
+    }
+
+    100% {
+      visibility: visible;
+      width: 100px;
+      height: 100px;
+    }
+
+  }
+
+  & {
+    animation: lock 0s 3s linear forwards;
+    overflow: hidden;
+  }
+
+  &::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 2;
+    animation: appear 0s 3s linear forwards;
+  }
+
+  @keyframes appear {
+
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  @keyframes lock {
+    to {
+      overflow: auto;
+    }
+  }
+
+  @keyframes hide {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }
+}
