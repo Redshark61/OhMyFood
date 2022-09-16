@@ -1,0 +1,120 @@
+#restaurant {
+  .header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #hero {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: #fff;
+    translate: 0 -30%;
+    display: flex;
+    justify-content: center;
+
+    button {
+      font-size: 2rem;
+    }
+  }
+
+  .banner-image {
+    height: 40vh;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .product {
+    width: 100%;
+    text-overflow: ellipsis;
+
+    .description {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $success;
+    font-size: 2rem;
+    overflow: hidden;
+  }
+
+  .footer {
+    margin-top: 3rem;
+  }
+
+  li.card:hover .check {
+    animation: openCheck 0.5s ease-in-out forwards;
+  }
+
+  li.card:hover .check>i {
+    animation: openi 0.5s ease-in-out forwards;
+  }
+
+  li.card:hover .product {
+    animation: openProduct 0.5s ease-in-out forwards;
+  }
+
+  .product-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 4rem;
+      height: 0.2rem;
+      background-color: $success;
+    }
+  }
+}
+
+@keyframes openCheck {
+  0% {
+    width: 0;
+    rotate: 0deg;
+  }
+
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes openi {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes openProduct {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
