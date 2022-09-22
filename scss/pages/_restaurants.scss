@@ -1,7 +1,19 @@
 #restaurant {
+  $fadeTime: 0.5s;
+
   .header {
     flex-direction: row;
     justify-content: space-around;
+    position: relative;
+
+    a {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: black;
+    }
   }
 
   #hero {
@@ -21,7 +33,6 @@
     height: 40vh;
 
     img {
-      height: 100%;
       object-fit: cover;
     }
   }
@@ -49,22 +60,36 @@
     background: $success;
     font-size: 2rem;
     overflow: hidden;
+    color: #fff;
   }
 
   .footer {
     margin-top: 3rem;
   }
 
-  li.card:hover .check {
+  main li {
+    translate: 0 20%;
+    opacity: 0;
+  }
+
+  main li:hover .check {
     animation: openCheck 0.5s ease-in-out forwards;
   }
 
-  li.card:hover .check>i {
+  main li .check {
+    animation: closeCheck 0.5s ease-in-out;
+  }
+
+  main li:hover .check>i {
     animation: openi 0.5s ease-in-out forwards;
   }
 
-  li.card:hover .product {
+  main li:hover .product {
     animation: openProduct 0.5s ease-in-out forwards;
+  }
+
+  main li .product {
+    animation: closeProduct 0.5s ease-in-out;
   }
 
   .product-subtitle {
@@ -82,6 +107,24 @@
       background-color: $success;
     }
   }
+
+  @for $i from 1 through 9 {
+    main li[data-key='#{$i}'] {
+      animation: fadeIn $fadeTime $i * $fadeTime ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes openCheck {
@@ -92,6 +135,16 @@
 
   100% {
     width: 20%;
+  }
+}
+
+@keyframes closeCheck {
+  0% {
+    width: 20%;
+  }
+
+  100% {
+    width: 0;
   }
 }
 
@@ -116,5 +169,15 @@
 
   100% {
     width: 80%;
+  }
+}
+
+@keyframes closeProduct {
+  0% {
+    width: 80%;
+  }
+
+  100% {
+    width: 100%;
   }
 }
