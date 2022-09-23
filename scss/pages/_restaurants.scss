@@ -31,6 +31,7 @@
 
   .banner-image {
     height: 40vh;
+    overflow: hidden;
 
     img {
       object-fit: cover;
@@ -108,7 +109,7 @@
     }
   }
 
-  @for $i from 1 through 9 {
+  @for $i from 1 through 10 {
     main li[data-key='#{$i}'] {
       animation: fadeIn $fadeTime $i * $fadeTime ease-in-out forwards;
     }

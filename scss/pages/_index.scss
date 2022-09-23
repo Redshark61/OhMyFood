@@ -1,4 +1,7 @@
 #index {
+  animation: lock 0s 1s linear forwards;
+  overflow: hidden;
+
   #hero {
     padding: 10vh 2rem 5vh;
 
@@ -11,6 +14,14 @@
 
   li.card {
     overflow: visible;
+
+    @include breakpoint-tablet {
+      max-width: 45%;
+    }
+
+    @include breakpoint-desktop {
+      max-width: 30%;
+    }
   }
 
   .spinner-container {
@@ -21,7 +32,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-    animation: hide 0s 3s linear forwards;
+    animation: hide 0s 1s linear forwards;
   }
 
   .s1,
@@ -38,19 +49,19 @@
 
   .s1 {
     background: $primary;
-    animation: load1 3s;
+    animation: load1 1s;
   }
 
   .s2 {
     background: $secondary;
     translate: 100px 0;
-    animation: load2 3s;
+    animation: load2 1s;
   }
 
   .s3 {
     background: $success;
     translate: 0 100px;
-    animation: load3 3s;
+    animation: load3 1s;
   }
 
   @keyframes load1 {
@@ -133,10 +144,7 @@
 
   }
 
-  & {
-    animation: lock 0s 3s linear forwards;
-    overflow: hidden;
-  }
+
 
   &::after {
     content: '';
@@ -144,7 +152,7 @@
     inset: 0;
     background: #fff;
     z-index: 2;
-    animation: appear 0s 3s linear forwards;
+    animation: appear 0s 1s linear forwards;
   }
 
   @keyframes appear {

@@ -16,4 +16,11 @@ img {
 
 section:not(.fit) {
   padding: 5vh 5vw;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include breakpoint-tablet {
+    gap: 2rem;
+    justify-content: center;
+  }
 }

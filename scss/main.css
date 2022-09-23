@@ -25,6 +25,14 @@ img {
 
 section:not(.fit) {
   padding: 5vh 5vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  section:not(.fit) {
+    gap: 2rem;
+    justify-content: center;
+  }
 }
 
 .title {
@@ -85,6 +93,22 @@ section:not(.fit) {
 .card-restaurant {
   overflow: hidden;
   position: relative;
+  flex-basis: 100%;
+}
+@media (min-width: 768px) {
+  .card-restaurant {
+    flex-basis: 45%;
+  }
+}
+@media (min-width: 1024px) {
+  .card-restaurant {
+    flex-basis: 30%;
+  }
+}
+@media (min-width: 1440px) {
+  .card-restaurant {
+    flex-basis: 20%;
+  }
 }
 .card-restaurant .invisible-link {
   position: absolute;
@@ -223,6 +247,10 @@ li {
 .footer {
   padding: 1rem;
 }
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
 .footer li {
   padding: 0;
 }
@@ -230,6 +258,11 @@ li {
   margin-top: 2rem;
 }
 
+#index {
+  -webkit-animation: lock 0s 1s linear forwards;
+          animation: lock 0s 1s linear forwards;
+  overflow: hidden;
+}
 #index #hero {
   padding: 10vh 2rem 5vh;
 }
@@ -241,6 +274,16 @@ li {
 #index li.card, #index li.card-restaurant {
   overflow: visible;
 }
+@media (min-width: 768px) {
+  #index li.card, #index li.card-restaurant {
+    max-width: 45%;
+  }
+}
+@media (min-width: 1024px) {
+  #index li.card, #index li.card-restaurant {
+    max-width: 30%;
+  }
+}
 #index .spinner-container {
   width: 200px;
   height: 200px;
@@ -249,8 +292,8 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  -webkit-animation: hide 0s 3s linear forwards;
-          animation: hide 0s 3s linear forwards;
+  -webkit-animation: hide 0s 1s linear forwards;
+          animation: hide 0s 1s linear forwards;
 }
 #index .s1,
 #index .s2,
@@ -265,20 +308,20 @@ li {
 }
 #index .s1 {
   background: #9356DC;
-  -webkit-animation: load1 3s;
-          animation: load1 3s;
+  -webkit-animation: load1 1s;
+          animation: load1 1s;
 }
 #index .s2 {
   background: #FF79DA;
   translate: 100px 0;
-  -webkit-animation: load2 3s;
-          animation: load2 3s;
+  -webkit-animation: load2 1s;
+          animation: load2 1s;
 }
 #index .s3 {
   background: #99E2D0;
   translate: 0 100px;
-  -webkit-animation: load3 3s;
-          animation: load3 3s;
+  -webkit-animation: load3 1s;
+          animation: load3 1s;
 }
 @-webkit-keyframes load1 {
   0% {
@@ -406,19 +449,14 @@ li {
     height: 100px;
   }
 }
-#index {
-  -webkit-animation: lock 0s 3s linear forwards;
-          animation: lock 0s 3s linear forwards;
-  overflow: hidden;
-}
 #index::after {
   content: "";
   position: fixed;
   inset: 0;
   background: #fff;
   z-index: 2;
-  -webkit-animation: appear 0s 3s linear forwards;
-          animation: appear 0s 3s linear forwards;
+  -webkit-animation: appear 0s 1s linear forwards;
+          animation: appear 0s 1s linear forwards;
 }
 @-webkit-keyframes appear {
   to {
@@ -485,6 +523,7 @@ li {
 }
 #restaurant .banner-image {
   height: 40vh;
+  overflow: hidden;
 }
 #restaurant .banner-image img {
   -o-object-fit: cover;
@@ -589,6 +628,10 @@ li {
 #restaurant main li[data-key="9"] {
   -webkit-animation: fadeIn 0.5s 4.5s ease-in-out forwards;
           animation: fadeIn 0.5s 4.5s ease-in-out forwards;
+}
+#restaurant main li[data-key="10"] {
+  -webkit-animation: fadeIn 0.5s 5s ease-in-out forwards;
+          animation: fadeIn 0.5s 5s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeIn {

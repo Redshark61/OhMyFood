@@ -10,6 +10,19 @@
   @extend .card;
   overflow: hidden;
   position: relative;
+  flex-basis: 100%;
+
+  @include breakpoint-tablet {
+    flex-basis: 45%;
+  }
+
+  @include breakpoint-desktop {
+    flex-basis: 30%;
+  }
+
+  @include breakpoint-desktop-lg {
+    flex-basis: 20%;
+  }
 
   .invisible-link {
     position: absolute;
