@@ -1,3 +1,6 @@
+@use '../utils/mixins';
+@use '../utils/variables';
+
 #restaurant {
   $fadeTime: 0.5s;
 
@@ -16,6 +19,10 @@
     }
   }
 
+  .button {
+    width: 50%;
+  }
+
   #hero {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -30,7 +37,7 @@
   }
 
   .banner-image {
-    height: 40vh;
+    max-height: 40vh;
     overflow: hidden;
 
     img {
@@ -47,7 +54,14 @@
       overflow: hidden;
       white-space: nowrap;
     }
+
+    h3 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
+
 
   .check {
     position: absolute;
@@ -58,7 +72,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $success;
+    background: variables.$success;
     font-size: 2rem;
     overflow: hidden;
     color: #fff;
@@ -105,7 +119,7 @@
       left: 0;
       width: 4rem;
       height: 0.2rem;
-      background-color: $success;
+      background-color: variables.$success;
     }
   }
 

@@ -1,3 +1,6 @@
+@use '../utils/mixins';
+@use '../utils/variables';
+
 #index {
   animation: lock 0s 1s linear forwards;
   overflow: hidden;
@@ -14,13 +17,18 @@
 
   li.card {
     overflow: visible;
+    transition: all 0.3s ease-in-out;
 
-    @include breakpoint-tablet {
+    @include mixins.breakpoint-tablet {
       max-width: 45%;
     }
 
-    @include breakpoint-desktop {
+    @include mixins.breakpoint-desktop {
       max-width: 30%;
+    }
+
+    &:hover {
+      background-color: lighten(variables.$primary, 30%);
     }
   }
 
@@ -48,18 +56,18 @@
   }
 
   .s1 {
-    background: $primary;
+    background: variables.$primary;
     animation: load1 1s;
   }
 
   .s2 {
-    background: $secondary;
+    background: variables.$secondary;
     translate: 100px 0;
     animation: load2 1s;
   }
 
   .s3 {
-    background: $success;
+    background: variables.$success;
     translate: 0 100px;
     animation: load3 1s;
   }

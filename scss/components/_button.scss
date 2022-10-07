@@ -1,8 +1,11 @@
+@use '../utils/mixins';
+@use '../utils/variables';
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, $primary, $secondary);
+  background-image: linear-gradient(to right, variables.$primary, variables.$secondary);
   color: #fff;
   padding: 1rem;
   border-radius: 30px;
@@ -26,7 +29,7 @@
     &--overlay {
       scale: 0;
       transition: all 0.3s ease-in-out;
-      color: $primary;
+      color: variables.$primary;
     }
 
     &--empty {

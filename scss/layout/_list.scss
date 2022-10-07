@@ -1,3 +1,7 @@
+@use '../utils/mixins';
+@use '../utils/variables';
+
+
 ul,
 ol {
   list-style: none;
@@ -23,17 +27,17 @@ li {
   content: counter(list-item);
   position: absolute;
   display: flex;
-  height: 20%;
+  height: 10%;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1;
-  left: -4%;
+  left: -3%;
   top: 50%;
   transform: translateY(-50%);
-  background-color: $primary;
+  background-color: variables.$primary;
   color: #fff;
   padding: 0.5rem;
   border-radius: 50%;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }

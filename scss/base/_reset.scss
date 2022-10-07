@@ -1,3 +1,5 @@
+@use "../utils/mixins";
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +21,7 @@ section:not(.fit) {
   display: flex;
   flex-wrap: wrap;
 
-  @include breakpoint-tablet {
+  @include mixins.breakpoint-tablet {
     gap: 2rem;
     justify-content: center;
   }

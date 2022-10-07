@@ -1,9 +1,15 @@
+@use '../utils/mixins';
+
 .title {
   font-family: "Shrikhand";
 }
 
 .text-center {
   text-align: center;
+
+  @include mixins.breakpoint-tablet {
+    width: 100%;
+  }
 }
 
 .center-self {

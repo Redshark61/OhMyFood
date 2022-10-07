@@ -1,3 +1,6 @@
+@use '../utils/mixins';
+@use '../utils/variables';
+
 .content-center {
   display: flex;
   flex-direction: column;

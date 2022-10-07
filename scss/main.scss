@@ -1,19 +1,19 @@
-@import "./utils/variables";
-@import "./utils/mixins";
+@use "./utils/variables";
+@use "./utils/mixins";
 
 
-@import "./themes/base";
+@use "./themes/base";
 
-@import "./base/reset";
-@import "./base/typo";
+@use "./base/reset";
+@use "./base/typo";
 
-@import "./components/button";
-@import "./components/card";
+@use "./components/button";
+@use "./components/card";
 
-@import "./layout/flex";
-@import "./layout/list";
-@import "./layout/header";
-@import "./layout/footer";
+@use "./layout/flex";
+@use "./layout/list";
+@use "./layout/header";
+@use "./layout/footer";
 
-@import "./pages/index";
-@import "./pages/restaurants";
+@use "./pages/index";
+@use "./pages/restaurants";

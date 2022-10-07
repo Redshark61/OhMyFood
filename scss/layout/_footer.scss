@@ -1,9 +1,25 @@
+@use '../utils/mixins';
+@use '../utils/variables';
+
 .footer {
   padding: 1rem;
+
+  @include mixins.breakpoint-tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   a {
     color: #fff;
     text-decoration: none;
+  }
+
+  ul {
+    @include mixins.breakpoint-tablet {
+      width: auto;
+    }
   }
 
   li {
