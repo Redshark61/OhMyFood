@@ -291,6 +291,7 @@ li {
   margin-bottom: 2rem;
 }
 #index li.card {
+  padding-left: 2rem;
   overflow: visible;
   transition: all 0.3s ease-in-out;
 }
@@ -306,6 +307,9 @@ li {
 }
 #index li.card:hover {
   background-color: #e4d5f6;
+}
+#index li.card:hover > i {
+  color: #9356DC;
 }
 #index .spinner-container {
   width: 200px;

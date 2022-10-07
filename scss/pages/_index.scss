@@ -16,6 +16,7 @@
   }
 
   li.card {
+    padding-left: 2rem;
     overflow: visible;
     transition: all 0.3s ease-in-out;
 
@@ -29,6 +30,10 @@
 
     &:hover {
       background-color: lighten(variables.$primary, 30%);
+
+      >i {
+        color: variables.$primary;
+      }
     }
   }
 
