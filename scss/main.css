@@ -42,6 +42,11 @@ section:not(.fit) {
 .text-center {
   text-align: center;
 }
+@media (min-width: 768px) {
+  .text-center {
+    width: 100%;
+  }
+}
 
 .center-self {
   margin: auto;
@@ -137,10 +142,11 @@ section:not(.fit) {
   font-size: 1rem;
   font-weight: 500;
   margin: 1rem;
+  border-radius: 5px;
 }
 .card-restaurant img {
   width: 100%;
-  max-height: 20vh;
+  height: 25vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -207,11 +213,11 @@ li {
   content: counter(list-item);
   position: absolute;
   display: flex;
-  height: 20%;
+  height: 10%;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1;
-  left: -4%;
+  left: -3%;
   top: 50%;
   transform: translateY(-50%);
   background-color: #9356DC;
@@ -219,7 +225,7 @@ li {
   padding: 0.5rem;
   border-radius: 50%;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 .header {
@@ -247,9 +253,22 @@ li {
 .footer {
   padding: 1rem;
 }
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .footer a {
   color: #fff;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .footer ul {
+    width: auto;
+  }
 }
 .footer li {
   padding: 0;
@@ -271,18 +290,22 @@ li {
   color: #999;
   margin-bottom: 2rem;
 }
-#index li.card, #index li.card-restaurant {
+#index li.card {
   overflow: visible;
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
-  #index li.card, #index li.card-restaurant {
+  #index li.card {
     max-width: 45%;
   }
 }
 @media (min-width: 1024px) {
-  #index li.card, #index li.card-restaurant {
+  #index li.card {
     max-width: 30%;
   }
+}
+#index li.card:hover {
+  background-color: #e4d5f6;
 }
 #index .spinner-container {
   width: 200px;
@@ -510,6 +533,9 @@ li {
   font-size: 2rem;
   color: black;
 }
+#restaurant .button {
+  width: 50%;
+}
 #restaurant #hero {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -522,7 +548,7 @@ li {
   font-size: 2rem;
 }
 #restaurant .banner-image {
-  height: 40vh;
+  max-height: 40vh;
   overflow: hidden;
 }
 #restaurant .banner-image img {
@@ -534,6 +560,11 @@ li {
   text-overflow: ellipsis;
 }
 #restaurant .product .description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#restaurant .product h3 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
