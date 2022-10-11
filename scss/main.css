@@ -81,7 +81,7 @@ section:not(.fit) {
   color: #9356DC;
 }
 .no-button > .heart--empty {
-  translate: 100% 0;
+  transform: translate(100%, 0);
 }
 .no-button:hover > .heart--overlay {
   scale: 1;
@@ -216,7 +216,7 @@ li {
   height: 10%;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   left: -3%;
   top: 50%;
   transform: translateY(-50%);
@@ -340,13 +340,13 @@ li {
 }
 #index .s2 {
   background: #FF79DA;
-  translate: 100px 0;
+  transform: translate(100px, 0);
   -webkit-animation: load2 1s;
           animation: load2 1s;
 }
 #index .s3 {
   background: #99E2D0;
-  translate: 0 100px;
+  transform: translate(0, 100px);
   -webkit-animation: load3 1s;
           animation: load3 1s;
 }
@@ -357,13 +357,13 @@ li {
     height: 90px;
   }
   25% {
-    translate: 100px 0;
+    transform: translate(100px, 0);
   }
   50% {
-    translate: 100px 100px;
+    transform: translate(100px, 100px);
   }
   75% {
-    translate: 0 100px;
+    transform: translate(0, 100px);
   }
   100% {
     visibility: visible;
@@ -378,13 +378,13 @@ li {
     height: 90px;
   }
   25% {
-    translate: 100px 0;
+    transform: translate(100px, 0);
   }
   50% {
-    translate: 100px 100px;
+    transform: translate(100px, 100px);
   }
   75% {
-    translate: 0 100px;
+    transform: translate(0, 100px);
   }
   100% {
     visibility: visible;
@@ -399,13 +399,13 @@ li {
     height: 90px;
   }
   25% {
-    translate: 100px 100px;
+    transform: translate(100px, 100px);
   }
   50% {
-    translate: 0px 100px;
+    transform: translate(0, 100px);
   }
   75% {
-    translate: 0 0px;
+    transform: translate(0, 0);
   }
   100% {
     visibility: visible;
@@ -420,13 +420,13 @@ li {
     height: 90px;
   }
   25% {
-    translate: 100px 100px;
+    transform: translate(100px, 100px);
   }
   50% {
-    translate: 0px 100px;
+    transform: translate(0, 100px);
   }
   75% {
-    translate: 0 0px;
+    transform: translate(0, 0);
   }
   100% {
     visibility: visible;
@@ -441,13 +441,13 @@ li {
     height: 90px;
   }
   25% {
-    translate: 0px 0px;
+    transform: translate(0, 0);
   }
   50% {
-    translate: 100px 0px;
+    transform: translate(100px, 0);
   }
   75% {
-    translate: 100px 100px;
+    transform: translate(100px, 100px);
   }
   100% {
     visibility: visible;
@@ -462,13 +462,13 @@ li {
     height: 90px;
   }
   25% {
-    translate: 0px 0px;
+    transform: translate(0, 0);
   }
   50% {
-    translate: 100px 0px;
+    transform: translate(100px, 0);
   }
   75% {
-    translate: 100px 100px;
+    transform: translate(100px, 100px);
   }
   100% {
     visibility: visible;
@@ -544,7 +544,7 @@ li {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #fff;
-  translate: 0 -30%;
+  transform: translate(0, -30%);
   display: flex;
   justify-content: center;
 }
@@ -591,7 +591,7 @@ li {
   margin-top: 3rem;
 }
 #restaurant main li {
-  translate: 0 20%;
+  transform: translate(0, 20%);
   opacity: 0;
 }
 #restaurant main li:hover .check {
@@ -693,7 +693,7 @@ li {
 @-webkit-keyframes openCheck {
   0% {
     width: 0;
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   100% {
     width: 20%;
@@ -702,7 +702,7 @@ li {
 @keyframes openCheck {
   0% {
     width: 0;
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   100% {
     width: 20%;
@@ -726,24 +726,24 @@ li {
 }
 @-webkit-keyframes openi {
   0% {
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   100% {
-    rotate: 180deg;
+    transform: rotate(180deg);
   }
   100% {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 @keyframes openi {
   0% {
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   100% {
-    rotate: 180deg;
+    transform: rotate(180deg);
   }
   100% {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 @-webkit-keyframes openProduct {
