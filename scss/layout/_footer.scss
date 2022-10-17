@@ -3,6 +3,7 @@
 
 .footer {
   padding: 1rem;
+  padding-bottom: 5vh;
 
   @include mixins.breakpoint-tablet {
     display: flex;
@@ -20,6 +21,10 @@
     @include mixins.breakpoint-tablet {
       width: auto;
     }
+  }
+
+  h2 {
+    font-weight: normal;
   }
 
   li {

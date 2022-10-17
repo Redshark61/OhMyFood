@@ -252,6 +252,7 @@ li {
 
 .footer {
   padding: 1rem;
+  padding-bottom: 5vh;
 }
 @media (min-width: 768px) {
   .footer {
@@ -269,6 +270,9 @@ li {
   .footer ul {
     width: auto;
   }
+}
+.footer h2 {
+  font-weight: normal;
 }
 .footer li {
   padding: 0;
@@ -537,6 +541,13 @@ li {
   font-size: 2rem;
   color: black;
 }
+#restaurant section:nth-child(3) {
+  padding-top: 0;
+}
+#restaurant section:nth-child(4) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 #restaurant .button {
   width: 50%;
 }
@@ -547,6 +558,7 @@ li {
   transform: translate(0, -30%);
   display: flex;
   justify-content: center;
+  padding-bottom: 2vh;
 }
 #restaurant #hero button {
   font-size: 2rem;
