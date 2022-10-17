@@ -19,6 +19,17 @@
     }
   }
 
+  section {
+    &:nth-child(3) {
+      padding-top: 0;
+    }
+
+    &:nth-child(4) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
   .button {
     width: 50%;
   }
@@ -30,6 +41,7 @@
     transform: translate(0, -30%);
     display: flex;
     justify-content: center;
+    padding-bottom: 2vh;
 
     button {
       font-size: 2rem;
@@ -82,35 +94,42 @@
     margin-top: 3rem;
   }
 
-  main li {
-    transform: translate(0, 20%);
-    opacity: 0;
-  }
+  main {
+    li {
+      transform: translate(0, 20%);
+      opacity: 0;
+      margin-bottom: 0;
 
-  main li:hover .check {
-    animation: openCheck 0.5s ease-in-out forwards;
-  }
+      &:hover {
+        .check {
+          animation: openCheck 0.5s ease-in-out forwards;
 
-  main li .check {
-    animation: closeCheck 0.5s ease-in-out;
-  }
+          >i {
+            animation: openi 0.5s ease-in-out forwards;
+          }
+        }
 
-  main li:hover .check>i {
-    animation: openi 0.5s ease-in-out forwards;
-  }
+        .product {
+          animation: openProduct 0.5s ease-in-out forwards;
+        }
+      }
 
-  main li:hover .product {
-    animation: openProduct 0.5s ease-in-out forwards;
-  }
+      .product {
+        animation: closeProduct 0.5s ease-in-out;
+      }
 
-  main li .product {
-    animation: closeProduct 0.5s ease-in-out;
+      .check {
+        animation: closeCheck 0.5s ease-in-out;
+      }
+    }
   }
 
   .product-subtitle {
     font-size: 1.5rem;
     font-weight: 300;
     position: relative;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 
     &::after {
       content: '';

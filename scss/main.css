@@ -605,14 +605,11 @@ li {
 #restaurant main li {
   transform: translate(0, 20%);
   opacity: 0;
+  margin-bottom: 0;
 }
 #restaurant main li:hover .check {
   -webkit-animation: openCheck 0.5s ease-in-out forwards;
           animation: openCheck 0.5s ease-in-out forwards;
-}
-#restaurant main li .check {
-  -webkit-animation: closeCheck 0.5s ease-in-out;
-          animation: closeCheck 0.5s ease-in-out;
 }
 #restaurant main li:hover .check > i {
   -webkit-animation: openi 0.5s ease-in-out forwards;
@@ -626,10 +623,16 @@ li {
   -webkit-animation: closeProduct 0.5s ease-in-out;
           animation: closeProduct 0.5s ease-in-out;
 }
+#restaurant main li .check {
+  -webkit-animation: closeCheck 0.5s ease-in-out;
+          animation: closeCheck 0.5s ease-in-out;
+}
 #restaurant .product-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
   position: relative;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 #restaurant .product-subtitle::after {
   content: "";
