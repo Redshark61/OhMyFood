@@ -24,9 +24,6 @@
       max-width: 45%;
     }
 
-    @include mixins.breakpoint-desktop {
-      max-width: 30%;
-    }
 
     &:hover {
       background-color: lighten(variables.$primary, 30%);

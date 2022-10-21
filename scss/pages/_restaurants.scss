@@ -51,9 +51,15 @@
   .banner-image {
     max-height: 40vh;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    @include mixins.breakpoint-desktop {
+      max-height: 50vh;
+    }
 
     img {
-      object-fit: cover;
+      height: 100%;
     }
   }
 

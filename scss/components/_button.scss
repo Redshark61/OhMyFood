@@ -24,6 +24,7 @@
   box-shadow: none;
   border: none;
   position: relative;
+  display: flex;
 
   >.heart {
     &--overlay {

@@ -19,6 +19,16 @@
   counter-reset: list-item;
 }
 
+body {
+  max-width: 800px;
+  margin-inline: auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+html {
+  background-color: #f5f5f5;
+}
+
 img {
   max-width: 100%;
 }
@@ -74,6 +84,7 @@ section:not(.fit) {
   box-shadow: none;
   border: none;
   position: relative;
+  display: flex;
 }
 .no-button > .heart--overlay {
   scale: 0;
@@ -105,7 +116,7 @@ section:not(.fit) {
     flex-basis: 45%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .card-restaurant {
     flex-basis: 30%;
   }
@@ -302,11 +313,6 @@ li {
 @media (min-width: 768px) {
   #index li.card {
     max-width: 45%;
-  }
-}
-@media (min-width: 1024px) {
-  #index li.card {
-    max-width: 30%;
   }
 }
 #index li.card:hover {
@@ -566,10 +572,16 @@ li {
 #restaurant .banner-image {
   max-height: 40vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  #restaurant .banner-image {
+    max-height: 50vh;
+  }
 }
 #restaurant .banner-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100%;
 }
 #restaurant .product {
   width: 100%;

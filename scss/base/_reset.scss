@@ -12,6 +12,16 @@
   counter-reset: list-item;
 }
 
+body {
+  max-width: 800px;
+  margin-inline: auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+html {
+  background-color: #f5f5f5;
+}
+
 img {
   max-width: 100%;
 }
